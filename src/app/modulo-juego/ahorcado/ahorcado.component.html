@@ -1,0 +1,64 @@
+<div class="fondo">
+<div class="container" >
+    <div class="row" style="margin-top: 20px">
+    
+     <div class="column"></div>
+ <div class="column" style="text-align:center; color:rgb(255, 251, 4)" >
+     <h1>
+         La palabra secreta es {{mascara}}
+     </h1>
+     <img
+            width="250"
+            alt="image"
+            src={{vidaImagen}}
+        >
+     
+ </div>
+ <div class="column">
+ 
+     <h3 style="text-align: right; float: right; color:rgb(255, 251, 4)" >Te quedan: {{vidas}}  Vidas</h3>
+ </div>
+</div>
+ <h2 style="padding: 60px; text-align: center; color:rgb(255, 251, 4)">{{mensaje}}</h2>
+
+ <div class="row" style="text-align:center">
+
+     <div
+         class="column"
+         style="min-width: 30%; max-height: 80px; margin-bottom: 160px;">
+         <label style="margin-right: 10px;color:rgb(255, 251, 4)"><h2>Elegí una letra</h2></label>
+        <br>
+         <div  *ngFor="let obj of abecedario" class="padre">
+            <button class="tecla" (click)="letraElegida(obj)" > {{obj}} </button>
+        </div>
+      
+
+         <button
+         *ngIf="juegoOn"            
+         (click)="game()"
+             class="btn btn-success"
+             role="button"
+             style="margin-right: 5px;color:rgb(247, 246, 254);    margin-left: 30px;"
+         >Probar Suerte</button>
+
+         <button
+         *ngIf="juegoOff" 
+         class="btn btn-danger"
+         role="button"
+         style="margin-right: 5px;color:rgb(255, 251, 4);    margin-left: 30px;" (click)="reiniciar()"
+     >Volver A Intentarlo</button>
+     </div>
+
+
+
+     <div
+         class="column"
+         style="min-width: 50%; text-align: left; max-height: 80px;color:rgb(255, 251, 4);"
+     >
+        
+         <h1 style="   margin-left: 40%;">letras usadas: <br>{{letrasUsadas}}</h1>
+     </div>
+ </div>
+</div>
+
+</div>

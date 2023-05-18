@@ -1,0 +1,36 @@
+ 
+<div class="fondo">
+<div class="container" >
+    <h1 style="color:rgb(255, 251, 4); text-align:center">Mayor o Menor</h1>
+    <div class="row" style="text-align:center">
+       
+        <div class="column" style="min-width: 50%; text-align: left; max-height: 80px">
+            <h2 style="color:rgb(255, 251, 4)">Acertaste: {{cuenta}} veces</h2>
+            <h4 style="color:rgb(255, 251, 4)">Te quedan {{vidas}} vidas</h4>
+            <br>  
+        </div>
+        <div class="column"  >  
+           <label *ngIf='mostrarFin' style="color:rgb(255, 251, 4)">Tu puntaje final es : {{cuenta}}</label>
+           <br> 
+            <button   class="btn btn-primary" role="button" style="margin-right: 5px" *ngIf='mostrarFin' (click)='reload()'>Reintentar</button>
+        </div>
+    </div>
+
+    <div  class="row" >
+        <h3 style="color:rgb(255, 251, 4)"> {{mensaje}} </h3>
+    </div>
+    <div class="row" >
+        <div class="column "  >
+            <img width="200px"  src={{cartaPrincipal.pathImg}}>
+        </div>
+        <div class="column">
+            <label style="color:rgb(255, 251, 4)">La carta que sigue es </label>  
+            <button (click)='play("mayor")'>Mayor</button>
+            <button (click)='play("igual")'>Igual</button>
+            <button (click)='play("menor")'>Menor</button> 
+            <label style="color:rgb(255, 251, 4)">que la actual</label>
+        </div> 
+    </div>
+</div>
+
+</div>

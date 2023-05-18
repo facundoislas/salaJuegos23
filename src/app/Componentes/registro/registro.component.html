@@ -1,0 +1,79 @@
+<body class="fondo">
+    <div class="container">
+    <!---heading---->
+        <header class="heading"> Formulario de Registro</header>
+     <!---Form starting----> 
+     <div class="row " style="margin-left: 70px;">
+      <!--- For Name---->
+            <div class="col-sm-12">
+                <div class="row">
+              <div class="col-xs-4">
+                        <label class="firstname"></label> </div>
+                <div class="col-xs-8">
+                    <input type="text" name="fname" id="fname" placeholder="Nombre" class="form-control " [(ngModel)]="this.usuario.nombre">
+                </div>
+             </div>
+        </div>
+
+        <div class="col-sm-12">
+            <div class="row">
+          <div class="col-xs-4">
+                    <label class="firstname"></label> </div>
+            <div class="col-xs-8">
+                <input type="text" name="fname" id="fname" placeholder="Apellido" class="form-control " [(ngModel)]="this.usuario.apellido">
+            </div>
+         </div>
+    </div>
+        
+        <!-----For email---->
+        <div class="col-sm-12">
+            <div class="row">
+              <div class="col-xs-4">
+                    <label class="mail" ></label></div>
+              <div class="col-xs-8"	>	 
+                   <input type="email" name="email"  id="email"placeholder="Correo Electrónico" class="form-control " [(ngModel)]="this.usuario.email" >
+                </div>
+            </div>
+        </div>
+      <!-----For Password and confirm password---->
+             <div class="col-sm-12">
+                <div class="row">
+                <div class="col-xs-4">
+                        <label class="pass"></label></div>
+             <div class="col-xs-8">
+                      <input type="password" name="password" id="password" placeholder="Contraseña" class="form-control" [(ngModel)]="this.usuario.pass">
+            </div>
+             </div>
+         </div>
+
+         <div class="col-sm-12">
+            <div class="row">
+            <div class="col-xs-4">
+                    <label class="pass"></label></div>
+         <div class="col-xs-8">
+                  <input type="password" name="password" id="password" placeholder="Reingresar contraseña" class="form-control">
+        </div>
+         </div>
+     </div>
+         
+        <!-----------For Phone number-------->
+            <div class="col-sm-12">
+            
+            <div class="col-sm-12"style="margin-left: -34px;">
+                <div class="btn btn-warning" (click)="enviar()">Enviar</div>
+          </div>
+          <br>
+          <div class="col-sm-12" style="margin-left: -34px;">
+            <div class="btn btn-warning" routerLink="/login" >Loguearse</div>
+      </div>
+      
+        </div>
+       
+      </div>	 
+            
+      
+      <div>
+        <div id="snackbar">{{Mensaje}}</div>
+      </div>
+   </div>
+   
